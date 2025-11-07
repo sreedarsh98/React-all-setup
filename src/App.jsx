@@ -9,6 +9,7 @@ import Home from "./pages/dashboard/Home";
 import Profile from "./pages/dashboard/Profile";
 import Settings from "./pages/dashboard/Settings";
 import Products from "./pages/dashboard/Products";
+import AddProducts from "./Components/AddProduct/AddProducts";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
                 <Route path="profile" element={<Profile />} />
                 <Route path="settings" element={<Settings />} />
                 <Route path="products" element={<Products />} />
+                <Route path="addproduct" element={<AddProducts/>}/>
               </Route>
             </Route>
           </Routes>

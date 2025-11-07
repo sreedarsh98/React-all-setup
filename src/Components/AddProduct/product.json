@@ -1,0 +1,32 @@
+[
+  {
+    "name": "productName",
+    "label": "Product Name",
+    "type": "text",
+    "placeholder": "Enter product name",
+    "required": true,
+    "min": 3
+  },
+  {
+    "name": "price",
+    "label": "Price",
+    "type": "number",
+    "placeholder": "Enter price",
+    "required": true,
+    "min": 1
+  },
+  {
+    "name": "category",
+    "label": "Category",
+    "type": "select",
+    "required": true,
+    "options": ["Electronics", "Fashion", "Home", "Sports"]
+  },
+  {
+    "name": "description",
+    "label": "Description",
+    "type": "textarea",
+    "required": true,
+    "min": 10
+  }
+]

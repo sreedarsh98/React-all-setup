@@ -8,6 +8,7 @@ const Sidebar = () => {
     { path: '/dashboard/profile', label: 'Profile', icon: '👤' },
     { path: '/dashboard/settings', label: 'Settings', icon: '⚙️' },
     { path: '/dashboard/products', label: 'Products', icon: '📦' },
+     { path: '/dashboard/addproduct', label: 'Add-Products', icon: '📦' },
   ];
 
   return (
