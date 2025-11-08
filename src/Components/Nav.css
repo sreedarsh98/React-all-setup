@@ -5,8 +5,8 @@
   height: 70px;
   display: flex;
   align-items: center;
-  position: sticky;
-  top: 0;
+  position: sticky !important;
+  top: 0 !important;
   z-index: 100;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }

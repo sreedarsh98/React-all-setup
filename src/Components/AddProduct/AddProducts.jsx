@@ -1,17 +1,13 @@
 "use client";
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import productField from "./product.json";
 import { buildValidationSchema } from "./validate";
 
 const AddProducts = () => {
-
-  const [data, setdata] = useState(()=>{
-
-  })
+  const [data, setdata] = useState(() => {});
 
   const initialValues = {};
-
 
   productField.forEach((item) => {
     initialValues[item.name] = "";
@@ -32,8 +28,7 @@ const AddProducts = () => {
     },
   });
 
-console.log(formik.values,"values");
-
+  console.log(formik.values, "values");
 
   return (
     <div className="container mt-4">
@@ -94,7 +89,7 @@ console.log(formik.values,"values");
           </button>
           <button
             onClick={() => formik.resetForm()}
-            type="bytton"
+            type="button"
             className="btn btn-danger w-10"
           >
             reset
