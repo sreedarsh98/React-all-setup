@@ -1,1 +1,10 @@
 /* App.css - Global app styles if needed */
+
+/* adding myown style for some pages */
+
+
+.product-search{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
