@@ -1,14 +1,15 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import './Sidebar.css';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import "./Sidebar.css";
 
 const Sidebar = () => {
   const menuItems = [
-    { path: '/dashboard', label: 'Home', icon: '🏠' },
-    { path: '/dashboard/profile', label: 'Profile', icon: '👤' },
-    { path: '/dashboard/settings', label: 'Settings', icon: '⚙️' },
-    { path: '/dashboard/products', label: 'Products', icon: '📦' },
-     { path: '/dashboard/addproduct', label: 'Add-Products', icon: '📦' },
+    { path: "/dashboard", label: "Home", icon: "🏠" },
+    { path: "/dashboard/profile", label: "Profile", icon: "👤" },
+    { path: "/dashboard/settings", label: "Settings", icon: "⚙️" },
+    { path: "/dashboard/products", label: "Products", icon: "📦" },
+    { path: "/dashboard/addproduct", label: "Add-Products", icon: "📦" },
+    { path: "/dashboard/addstudent", label: "Add-Student", icon: "⚙️" },
   ];
 
   return (
@@ -23,7 +24,7 @@ const Sidebar = () => {
               <NavLink
                 to={item.path}
                 className={({ isActive }) =>
-                  `nav-link ${isActive ? 'active' : ''}`
+                  `nav-link ${isActive ? "active" : ""}`
                 }
               >
                 <span className="nav-icon">{item.icon}</span>
