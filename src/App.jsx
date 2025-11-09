@@ -14,6 +14,7 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import ReduxtAction from "./pages/dashboard/ReduxtAction";
 import StudentRegistration from "./pages/StudentRegistration";
+import CustomerRegistration from "./pages/CustomerRegistration";
 function App() {
   return (
     <Provider store={store}>
@@ -32,6 +33,7 @@ function App() {
                   <Route path="addproduct" element={<AddProducts />} />
                   <Route path="actions" element={<ReduxtAction/>}/>
                   <Route path="addstudent" element={<StudentRegistration/>}/>
+                  <Route path="addcustomer" element={<CustomerRegistration/>}/>
                 </Route>
               </Route>
             </Routes>
