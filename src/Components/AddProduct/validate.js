@@ -6,21 +6,45 @@ export const buildValidationSchema = (fields) => {
   fields.forEach((field) => {
     let validator;
 
-    if (field.type === "number") {
+    // FILE VALIDATION
+    if (field.type === "file") {
+      validator = Yup.mixed().nullable();
+
+      if (field.required) {
+        validator = validator.required(`${field.label} is required`);
+      }
+    }
+
+    // NUMBER VALIDATION
+    else if (field.type === "number") {
       validator = Yup.number().typeError(`${field.label} must be a number`);
-    } else {
+
+      if (field.required) {
+        validator = validator.required(`${field.label} is required`);
+      }
+
+      if (field.min) {
+        validator = validator.min(
+          field.min,
+          `Minimum value is ${field.min}`
+        );
+      }
+    }
+
+    // STRING / TEXT / TEXTAREA / SELECT
+    else {
       validator = Yup.string();
-    }
 
-    if (field.required) {
-      validator = validator.required(`${field.label} is required`); 
-    }
+      if (field.required) {
+        validator = validator.required(`${field.label} is required`);
+      }
 
-    if (field.min) {
-      validator =
-        field.type === "number"
-          ? validator.min(field.min, `Minimum value is ${field.min}`)
-          : validator.min(field.min, `Minimum ${field.min} characters`);
+      if (field.min) {
+        validator = validator.min(
+          field.min,
+          `Minimum ${field.min} characters`
+        );
+      }
     }
 
     shape[field.name] = validator;

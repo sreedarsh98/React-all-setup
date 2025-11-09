@@ -28,5 +28,11 @@
     "type": "textarea",
     "required": true,
     "min": 10
+  },
+  {
+    "name": "image",
+    "label": "Product Image",
+    "type": "file",
+    "required":false
   }
 ]

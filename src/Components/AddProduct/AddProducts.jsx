@@ -10,8 +10,10 @@ const AddProducts = () => {
   const initialValues = {};
 
   productField.forEach((item) => {
-    initialValues[item.name] = "";
+    initialValues[item.name] = item.type == "file" ? null : "";
   });
+
+  console.log(productField, "product filed");
 
   const validationSchema = buildValidationSchema(productField);
 
@@ -82,18 +84,19 @@ const AddProducts = () => {
             )}
           </div>
         ))}
-
-        <div className="col-4 d-flex gap-3">
-          <button type="submit" className="btn btn-primary w-80">
-            Add Product
-          </button>
-          <button
-            onClick={() => formik.resetForm()}
-            type="button"
-            className="btn btn-danger w-10"
-          >
-            reset
-          </button>
+        <div className="row mt-5">
+          <div className="col-4 d-flex gap-3">
+            <button type="submit" className="btn btn-primary w-80">
+              Add Product
+            </button>
+            <button
+              onClick={() => formik.resetForm()}
+              type="button"
+              className="btn btn-danger w-10"
+            >
+              reset
+            </button>
+          </div>
         </div>
       </form>
     </div>

@@ -10,28 +10,33 @@ import Profile from "./pages/dashboard/Profile";
 import Settings from "./pages/dashboard/Settings";
 import Products from "./pages/dashboard/Products";
 import AddProducts from "./Components/AddProduct/AddProducts";
-
+import { Provider } from "react-redux";
+import store from "./redux/store";
+import ReduxtAction from "./pages/dashboard/ReduxtAction";
 function App() {
   return (
-    <ThemeProvider>
-      <BrowserRouter>
-        <Authprovider>
-          <Routes>
-            <Route path="/" element={<Navigate to="/login" replace />} />
-            <Route path="/login" element={<Login />} />
-            <Route element={<ProtectedRoutes />}>
-              <Route path="/dashboard" element={<DashboardLayout />}>
-                <Route index element={<Home />} />
-                <Route path="profile" element={<Profile />} />
-                <Route path="settings" element={<Settings />} />
-                <Route path="products" element={<Products />} />
-                <Route path="addproduct" element={<AddProducts/>}/>
+    <Provider store={store}>
+      <ThemeProvider>
+        <BrowserRouter>
+          <Authprovider>
+            <Routes>
+              <Route path="/" element={<Navigate to="/login" replace />} />
+              <Route path="/login" element={<Login />} />
+              <Route element={<ProtectedRoutes />}>
+                <Route path="/dashboard" element={<DashboardLayout />}>
+                  <Route index element={<Home />} />
+                  <Route path="profile" element={<Profile />} />
+                  <Route path="settings" element={<Settings />} />
+                  <Route path="products" element={<Products />} />
+                  <Route path="addproduct" element={<AddProducts />} />
+                  <Route path="actions" element={<ReduxtAction/>}/>
+                </Route>
               </Route>
-            </Route>
-          </Routes>
-        </Authprovider>
-      </BrowserRouter>
-    </ThemeProvider>
+            </Routes>
+          </Authprovider>
+        </BrowserRouter>
+      </ThemeProvider>
+    </Provider>
   );
 }
 
