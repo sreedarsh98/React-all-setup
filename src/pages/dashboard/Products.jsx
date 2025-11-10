@@ -4,10 +4,10 @@ import "./Dashboard.css";
 import useFetch from "../../Hooks/useFetch";
 
 const Products = () => {
-  
+
   // const { data } = useFetch("/products?limit=0");
 
-  console.log(data, "data from use fetch");
+  // console.log(data, "data from use fetch");
 
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
