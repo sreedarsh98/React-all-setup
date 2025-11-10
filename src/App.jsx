@@ -18,6 +18,9 @@ import CustomerRegistration from "./pages/CustomerRegistration";
 import TodoApp from "./pages/Todo";
 import KanbanBoard from "./pages/KanbanBoard";
 import ProductDetails from "./pages/dashboard/ProductDetails";
+import Scrollpagination from "./pages/dashboard/Scrollpagination";
+import SortProduct from "./pages/dashboard/Sort";
+import PaginationProduct from "./pages/dashboard/PagintionProduct";
 function App() {
   return (
     <Provider store={store}>
@@ -43,6 +46,9 @@ function App() {
                   />
                   <Route path="todo" element={<TodoApp />} />
                   <Route path="kanban" element={<KanbanBoard />} />
+                  <Route path="scroll" element={<Scrollpagination/>}/>
+                  <Route path="sort" element={<SortProduct/>}/>
+                  <Route path="pagination" element={<PaginationProduct/>}/>
                 </Route>
               </Route>
             </Routes>
