@@ -1,0 +1,115 @@
+/* App Container */
+.kanban-app {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 16px;
+  font-family: Arial, sans-serif;
+}
+
+.kanban-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Add Task Form */
+.kanban-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.kanban-input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.kanban-btn {
+  padding: 10px 14px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Board Layout */
+.kanban-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* Columns */
+.kanban-column {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  max-height: 70vh;
+}
+
+.kanban-column.drag-over {
+  background: #eef2ff;
+}
+
+.kanban-column-header {
+  padding: 12px;
+  font-weight: bold;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+}
+
+.count {
+  font-size: 12px;
+  background: #e0e7ff;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.kanban-column-body {
+  padding: 12px;
+  display: grid;
+  gap: 12px;
+  overflow-y: auto;
+}
+
+/* Cards */
+.kanban-card {
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  transition: box-shadow 0.2s ease;
+}
+
+.kanban-card.dragging {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.kanban-card-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.kanban-card-note {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.delete-btn {
+  padding: 6px 10px;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}

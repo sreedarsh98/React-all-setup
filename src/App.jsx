@@ -15,6 +15,8 @@ import store from "./redux/store";
 import ReduxtAction from "./pages/dashboard/ReduxtAction";
 import StudentRegistration from "./pages/StudentRegistration";
 import CustomerRegistration from "./pages/CustomerRegistration";
+import TodoApp from "./pages/Todo";
+import KanbanBoard from "./pages/KanbanBoard";
 function App() {
   return (
     <Provider store={store}>
@@ -31,9 +33,14 @@ function App() {
                   <Route path="settings" element={<Settings />} />
                   <Route path="products" element={<Products />} />
                   <Route path="addproduct" element={<AddProducts />} />
-                  <Route path="actions" element={<ReduxtAction/>}/>
-                  <Route path="addstudent" element={<StudentRegistration/>}/>
-                  <Route path="addcustomer" element={<CustomerRegistration/>}/>
+                  <Route path="actions" element={<ReduxtAction />} />
+                  <Route path="addstudent" element={<StudentRegistration />} />
+                  <Route
+                    path="addcustomer"
+                    element={<CustomerRegistration />}
+                  />
+                  <Route path="todo" element={<TodoApp />} />
+                  <Route path="kanban" element={<KanbanBoard />} />
                 </Route>
               </Route>
             </Routes>

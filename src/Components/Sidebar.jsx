@@ -1,15 +1,25 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
+import { House, Settings, SquarePlus, Target, UserPen } from "lucide-react";
 
 const Sidebar = () => {
   const menuItems = [
-    { path: "/dashboard", label: "Home", icon: "🏠" },
-    { path: "/dashboard/profile", label: "Profile", icon: "👤" },
-    { path: "/dashboard/settings", label: "Settings", icon: "⚙️" },
-    { path: "/dashboard/products", label: "Products", icon: "📦" },
-    { path: "/dashboard/addproduct", label: "Add-Products", icon: "📦" },
-    { path: "/dashboard/addstudent", label: "Add-Student", icon: "⚙️" },
+    { path: "/dashboard", label: "Home", icon: <House />,end:true},
+    { path: "/dashboard/profile", label: "Profile", icon: <UserPen /> },
+    { path: "/dashboard/settings", label: "Settings", icon: <Settings /> },
+    { path: "/dashboard/products", label: "Products", icon: <Target /> },
+    {
+      path: "/dashboard/addproduct",
+      label: "Add-Products",
+      icon: <SquarePlus />,
+    },
+    {
+      path: "/dashboard/addstudent",
+      label: "Add-Student",
+      icon: <SquarePlus />,
+    },
+    { path: "/dashboard/todo", label: "To-do", icon: <SquarePlus /> },
   ];
 
   return (

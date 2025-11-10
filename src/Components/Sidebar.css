@@ -47,13 +47,13 @@
 }
 
 .nav-link {
-  display: flex;
-  align-items: center;
-  padding: 14px 20px;
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border-left: 3px solid transparent;
+  display: flex !important;
+  align-items: center !important;
+  padding: 14px 20px !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  border-left: 3px solid transparent !important;
 }
 
 .nav-link:hover {
