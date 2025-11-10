@@ -1,8 +1,14 @@
 import React, { useState, useEffect, useCallback } from "react";
 import api from "../../api/axiosinstance";
 import "./Dashboard.css";
+import useFetch from "../../Hooks/useFetch";
 
 const Products = () => {
+  
+  // const { data } = useFetch("/products?limit=0");
+
+  console.log(data, "data from use fetch");
+
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -29,7 +35,6 @@ const Products = () => {
     }
   };
 
-
   const debouncedSearch = useCallback(() => {
     const handler = setTimeout(() => {
       fetchProducts(search);
@@ -37,13 +42,9 @@ const Products = () => {
     return () => clearTimeout(handler);
   }, [search]);
 
-
-
   useEffect(() => {
     debouncedSearch();
   }, [search, debouncedSearch]);
-
-
 
   return (
     <div className="dashboard-page">
@@ -86,5 +87,3 @@ const Products = () => {
 };
 
 export default Products;
-
-
