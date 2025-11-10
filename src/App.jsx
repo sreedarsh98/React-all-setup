@@ -17,6 +17,7 @@ import StudentRegistration from "./pages/StudentRegistration";
 import CustomerRegistration from "./pages/CustomerRegistration";
 import TodoApp from "./pages/Todo";
 import KanbanBoard from "./pages/KanbanBoard";
+import ProductDetails from "./pages/dashboard/ProductDetails";
 function App() {
   return (
     <Provider store={store}>
@@ -32,6 +33,7 @@ function App() {
                   <Route path="profile" element={<Profile />} />
                   <Route path="settings" element={<Settings />} />
                   <Route path="products" element={<Products />} />
+                  <Route path="products/:id" element={<ProductDetails />} />
                   <Route path="addproduct" element={<AddProducts />} />
                   <Route path="actions" element={<ReduxtAction />} />
                   <Route path="addstudent" element={<StudentRegistration />} />

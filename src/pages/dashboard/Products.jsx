@@ -2,8 +2,14 @@ import React, { useState, useEffect, useCallback } from "react";
 import api from "../../api/axiosinstance";
 import "./Dashboard.css";
 import useFetch from "../../Hooks/useFetch";
+import { useNavigate } from "react-router-dom";
 
 const Products = () => {
+   const navigate = useNavigate();
+
+     const goToDetail = (id) => {
+    navigate(`/dashboard/products/${id}`);
+  };
 
   // const { data } = useFetch("/products?limit=0");
 
@@ -66,7 +72,7 @@ const Products = () => {
       {!loading && !error && (
         <div className="products-grid">
           {products.map((product) => (
-            <div key={product.id} className="product-card">
+            <div onClick={()=>goToDetail(product.id)} key={product.id} className="product-card">
               <div className="product-image">
                 <img src={product.thumbnail} alt={product.title} />
               </div>
